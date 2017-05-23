@@ -11,8 +11,6 @@ require('dotenv').config({silent: true});
 import courses from './api/course';
 import lessons from './api/lesson';
 
-//const CONNECTION = 'mongodb://angel:password@ds159050.mlab.com:59050/codercampsdb--angel';
-
 mongoose.connect(process.env.CONNECTION_STRING)
   .then(() => console.log('connection established'))
   .catch((err) => console.log(err));
