@@ -9,7 +9,7 @@ import * as mongoose from 'mongoose';
 require('dotenv').config({silent: true});
 
 import courses from './api/course';
-import lessons from './api/lesson';
+import lessons from './api/lesson'; 
 
 mongoose.connect(process.env.CONNECTION_STRING)
   .then(() => console.log('connection established'))
