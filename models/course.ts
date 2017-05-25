@@ -1,8 +1,9 @@
 import * as mongoose from 'mongoose';
 
 export interface Course extends mongoose.Document {
-  name;
-  icon;
+  name: string;
+  isDisabled: boolean;
+  icon: string;
 }
 
 let courseSchema = new mongoose.Schema({
@@ -10,9 +11,8 @@ let courseSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  icon: {
-    type: String
-  }
+  isDisabled: Boolean,
+  icon: String
 });
 
 export default mongoose.model<Course>('Course', courseSchema);
