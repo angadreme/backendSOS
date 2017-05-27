@@ -5,11 +5,11 @@ interface Question extends mongoose.Document{
   qContent: string;
   qDate: string;
   userID: string;
-  lessionID: string;
+  lessonID: string;
   clickCount: number;
 }
 
-let QuestionSchema = new mongoose.Schema({
+let questionSchema = new mongoose.Schema({
   qTitle: {
     type: String,
     required: true
@@ -19,18 +19,18 @@ let QuestionSchema = new mongoose.Schema({
     required: true
   },
   qDate: {
-    type: String,
+    type: Date,
     required: true
   },
   userID: {
     type: String,
     required:true
   },
-  lessionID: {
+  lessonID: {
     type: String,
     required: true
   },
   clickCount: Number
 });
 
-export default mongoose.model<Question>('Question', QuestionSchema);
+export default mongoose.model<Question>('Question', questionSchema);

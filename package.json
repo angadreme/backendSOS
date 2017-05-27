@@ -24,11 +24,9 @@
     "dotenv": "^4.0.0",
     "ejs": "~2.4.1",
     "express": "~4.13.4",
-<<<<<<< HEAD
+
     "mongoose": "^4.10.2",
-=======
-    "mongoose": "^4.10.0",
->>>>>>> d7153203cb01d9cc77d67f722ad02b6efc06ceb7
+
     "morgan": "~1.7.0",
     "serve-favicon": "~2.3.0"
   }
