@@ -24,7 +24,6 @@ let questionSchema = new mongoose.Schema({
   },
   userID: {
     type: String,
-    required:true
   },
   lessonID: {
     type: String,
