@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
   let newCourse = new Course();
   newCourse.name = req.body.name;
-  newCourse.isDisabled = req.body.isDisabled;
+  newCourse.isEnabled = req.body.isEnabled;
   newCourse.icon = req.body.icon;
   newCourse.save().then((createdCourse) => res.json(createdCourse));
 });
@@ -23,7 +23,7 @@ router.get('/:id', (req, res) => {
 router.post('/:id', (req, res) => {
   Course.findById(req.params.id).then((foundCourse) => {
     foundCourse.name = req.body.name;
-    foundCourse.isDisabled = req.body.isDisabled;
+    foundCourse.isEnabled = req.body.isEnabled;
     foundCourse.icon = req.body.icon;
     foundCourse.save().then((savedCourse) => res.json(savedCourse));
   });
