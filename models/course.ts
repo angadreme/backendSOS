@@ -2,7 +2,7 @@ import * as mongoose from 'mongoose';
 
 export interface Course extends mongoose.Document {
   name: string;
-  isDisabled: boolean;
+  Enabled: boolean;
   icon: string;
 }
 
@@ -11,7 +11,11 @@ let courseSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  isDisabled: Boolean,
+  Enabled: {
+    type: Boolean,
+    default: true,
+    required: true
+  },
   icon: String
 });
 
