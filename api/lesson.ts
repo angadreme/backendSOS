@@ -3,13 +3,18 @@ import Lesson from '../models/lesson';
 
 let router = express.Router();
 
-router.get('/course/:id/lessons', (req, res) => {
-  Lesson.find({courseId: req.params.id})
+router.get('/:id', (req, res) => {
+  Lesson.find(req.params.id)
   .then((matches) => res.json(matches));
 });
 
 router.get('/', (req, res) => {
   Lesson.find().then((lessons) => res.json(lessons));
+});
+
+router.get('/courses/:id/lessons', (req, res) => {
+  Lesson.find({courseId: req.params.id})
+  .then((matches) => res.json(matches));
 });
 
 router.post('/', (req, res) => {
@@ -20,7 +25,7 @@ router.post('/', (req, res) => {
 });
 
 router.get('/:id', (req, res) => {
-  Lesson.findById(req.params.id)
+  Lesson.findOne({_id: req.params.id})
   .then((foundLessons) => res.json(foundLessons));
 });
 
