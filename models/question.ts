@@ -5,7 +5,7 @@ interface Question extends mongoose.Document{
   qContent: string;
   qDate: string;
   userID: string;
-  lessionID: string;
+  lessonID: string;
   clickCount: number;
 }
 
@@ -14,22 +14,18 @@ let QuestionSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  qContent: {
-    type: String,
-    required: true
-  },
   qDate: {
     type: String,
     required: true
   },
   userID: {
-    type: String,
-    required:true
+    type: String
   },
-  lessionID: {
+  lessonID: {
     type: String,
     required: true
   },
+  qContent: String,
   clickCount: Number
 });
 
