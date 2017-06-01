@@ -1,12 +1,12 @@
 import * as mongoose from 'mongoose';
 
 interface Question extends mongoose.Document{
-  qTitle: string;
-  qContent: string;
-  qDate: string;
-  userID: string;
-  lessonID: string;
-  clickCount: number;
+  qTitle;
+  qContent;
+  qDate;
+  userID;
+  lessonID;
+  clickCount;
 }
 
 let questionSchema = new mongoose.Schema({
