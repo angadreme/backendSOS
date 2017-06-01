@@ -3,21 +3,21 @@ import * as mongoose from 'mongoose';
 export interface Comment extends mongoose.Document {
   cDate;
   answerId;
-  aContent;
+  cContent;
   userId;
   likeCount;
 }
 
 let commentSchema = new mongoose.Schema ({
   cDate: {
-    type: Date,
+    type: String,
     required: true
   },
   answerId: {
     type: String,
     required: true
   },
-  aContent: {
+  cContent: {
     type: String,
     required: true
   },
