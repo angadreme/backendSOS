@@ -33,14 +33,8 @@ router.post('/', (req, res) => {
 });
 
 router.get('/:id', (req, res) => {
-<<<<<<< HEAD
   Lesson.findById(req.params.id)
   .then((foundLesson) => res.json(foundLesson));
-=======
-  console.log("router4")
-  Lesson.findOne({_id: req.params.id})
-  .then((foundLessons) => res.json(foundLessons));
->>>>>>> 7b89529a13f05db621b2720a8226922dd19fc3c1
 });
 
 router.post('/:id', (req, res) => {
