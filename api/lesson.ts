@@ -3,13 +3,12 @@ import Lesson from '../models/lesson';
 
 let router = express.Router();
 
-<<<<<<< HEAD
+
 // router.get('/:id', (req, res) => {
-=======
 // DO NOT UNCOMMENT, THIS CAUSES QUESTIONS TO NOT PULL THROUGH DUE TO JS BEING ASYNC, BUT LEAVE FOR REFERENCE PLEASE
 // router.get('/:id', (req, res) => {
 //   console.log("router1")
->>>>>>> 7b89529a13f05db621b2720a8226922dd19fc3c1
+
 //   Lesson.find(req.params.id)
 //   .then((matches) => res.json(matches));
 // });
