@@ -15,8 +15,8 @@ mongoose.connect(process.env.CONNECTION_STRING)
   .then(() => console.log('connection established'))
   .catch((err) => console.log(err));
 
-import routes from './routes/index';
-import users from './routes/users';
+// import routes from './routes/index';
+// import users from './routes/users';
 
 let app = express();
 
