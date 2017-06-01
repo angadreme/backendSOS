@@ -9,13 +9,13 @@ interface Question extends mongoose.Document{
   clickCount: number;
 }
 
-let QuestionSchema = new mongoose.Schema({
+let questionSchema = new mongoose.Schema({
   qTitle: {
     type: String,
     required: true
   },
   qDate: {
-    type: String,
+    type: Date,
     required: true
   },
   userID: {
@@ -29,4 +29,4 @@ let QuestionSchema = new mongoose.Schema({
   clickCount: Number
 });
 
-export default mongoose.model<Question>('Question', QuestionSchema);
+export default mongoose.model<Question>('Question', questionSchema);
