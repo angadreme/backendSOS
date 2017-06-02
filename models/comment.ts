@@ -17,10 +17,15 @@ let commentSchema = new mongoose.Schema ({
     type: String,
     required: true
   },
+
+  aComment: {
+    type: String,
+    required: true
+  },
+
   userId: {
     type: String
   },
-  aComment: String,
   likeCount: Number
 
 });
