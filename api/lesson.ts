@@ -31,8 +31,10 @@ router.post('/', (req, res) => {
 });
 
 router.get('/:id', (req, res) => {
-  Lesson.findById(req.params.id)
-  .then((foundLesson) => res.json(foundLesson));
+  console.log("router4")
+  Lesson.findOne({_id: req.params.id})
+  .then((foundLessons) => res.json(foundLessons));
+
 });
 
 router.post('/:id', (req, res) => {

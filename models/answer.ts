@@ -9,7 +9,7 @@ interface Answer extends mongoose.Document{
   bestAnswer;
 }
 
-let AnswerSchema = new mongoose.Schema({
+let answerSchema = new mongoose.Schema({
   aDate: {
     type: Date,
     required: true
@@ -29,4 +29,4 @@ let AnswerSchema = new mongoose.Schema({
   bestAnswer: Boolean
 });
 
-export default mongoose.model<Answer>('Answer', AnswerSchema);
+export default mongoose.model<Answer>('Answer', answerSchema);
