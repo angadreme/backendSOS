@@ -6,9 +6,7 @@ let router = express.Router();
 
 // router.get('/:id', (req, res) => {
 // DO NOT UNCOMMENT, THIS CAUSES QUESTIONS TO NOT PULL THROUGH DUE TO JS BEING ASYNC, BUT LEAVE FOR REFERENCE PLEASE
-// router.get('/:id', (req, res) => {
 //   console.log("router1")
-
 //   Lesson.find(req.params.id)
 //   .then((matches) => res.json(matches));
 // });
