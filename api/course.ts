@@ -10,8 +10,8 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
   let newCourse = new Course();
   newCourse.name = req.body.name;
-  newCourse.isEnabled = req.body.isEnabled;
-  newCourse.icon = req.body.icon;
+  // newCourse.isEnabled = req.body.isEnabled; WHEN THIS IS PRESENT THE POST WILL RECEIVE THE REQ BUT THE RES PENDS AND THEN FAILS
+  // newCourse.icon = req.body.icon;
   newCourse.save().then((createdCourse) => res.json(createdCourse));
 });
 
