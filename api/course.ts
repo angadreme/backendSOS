@@ -17,7 +17,8 @@ router.post('/', (req, res) => {
 
 router.get('/:id', (req, res) => {
   Course.findById(req.params.id)
-  .then((foundCourse) => res.json(foundCourse));
+  .then((foundCourse) => res.json(foundCourse))
+  .catch((err) => console.log(err));
 });
 
 router.post('/:id', (req, res) => {
@@ -25,7 +26,8 @@ router.post('/:id', (req, res) => {
     foundCourse.name = req.body.name;
     foundCourse.isEnabled = req.body.isEnabled;
     foundCourse.icon = req.body.icon;
-    foundCourse.save().then((savedCourse) => res.json(savedCourse));
+    foundCourse.save().then((savedCourse) => res.json(savedCourse))
+    .catch((err) => console.log(err));
   });
 });
 
