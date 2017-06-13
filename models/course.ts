@@ -13,7 +13,7 @@ let courseSchema = new mongoose.Schema({
   },
   isEnabled: {
     type: Boolean,
-    default: true,
+    default: false,
     required: true
   },
   icon: String
